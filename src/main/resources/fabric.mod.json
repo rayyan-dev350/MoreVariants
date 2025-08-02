@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "morevariants",
+  "version": "${version}",
+  "name": "MoreVariants",
+  "description": "Adds more mob variants.",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/morevariants/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "dev.giga.morevariants.client.MoreVariantsDataGenerator"
+    ],
+    "client": [
+      "dev.giga.morevariants.client.MoreVariantsClient"
+    ],
+    "main": [
+      "dev.giga.morevariants.MoreVariants"
+    ]
+  },
+  "mixins": [
+    "morevariants.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
