@@ -1,0 +1,3 @@
+/effect clear
+/locate biome plains
+/tp @s -12 85 -73
