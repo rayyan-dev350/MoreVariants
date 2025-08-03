@@ -1,6 +1,7 @@
 package dev.giga.morevariants.registry.item;
 
 import dev.giga.morevariants.MoreVariants;
+import dev.giga.morevariants.items.DarknessVialItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -14,7 +15,7 @@ public class ModItems {
     public static final Item SPORE_SAC = registerItem("spore_sac", Item::new);
     public static final Item ROOTED_PEARL = registerItem("rooted_pearl", Item::new);
     public static final Item VOID_RESIDUE = registerItem("void_residue", Item::new);
-    public static final Item DARKNESS_VIAL = registerItem("darkness_vial", Item::new);
+    public static final Item DARKNESS_VIAL = registerItem("darkness_vial", DarknessVialItem::new);
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
         return Registry.register(Registries.ITEM, Identifier.of(MoreVariants.MOD_ID, name),
