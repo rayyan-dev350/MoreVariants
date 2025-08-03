@@ -2,6 +2,7 @@ package dev.giga.morevariants.registry.entity;
 
 import dev.giga.morevariants.MoreVariants;
 import dev.giga.morevariants.entities.DarknessVialEntity;
+import dev.giga.morevariants.entities.RootedPearlEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -25,6 +26,21 @@ public class ModEntityTypes {
                     .maxTrackingRange(64)
                     .trackingTickInterval(10)
                     .build(DARKNESS_VIAL_KEY)
+    );
+
+    public static final RegistryKey<EntityType<?>> ROOTED_PEARL_KEY = RegistryKey.of(
+            RegistryKeys.ENTITY_TYPE,
+            Identifier.of(MoreVariants.MOD_ID, "rooted_pearl")
+    );
+
+    public static final EntityType<RootedPearlEntity> ROOTED_PEARL = Registry.register(
+            Registries.ENTITY_TYPE,
+            ROOTED_PEARL_KEY,
+            EntityType.Builder.<RootedPearlEntity>create(RootedPearlEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.25F, 0.25F)
+                    .maxTrackingRange(64)
+                    .trackingTickInterval(10)
+                    .build(ROOTED_PEARL_KEY)
     );
 
     public static void registerEntityTypes() {
